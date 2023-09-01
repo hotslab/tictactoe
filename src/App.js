@@ -40,6 +40,7 @@ function App() {
         currentPlayer.symbol === newBoxes[i].value
         && newBoxes[i].value === newBoxes[i + 1].value
         && newBoxes[i + 1].value === newBoxes[i + 2].value
+        && newBoxes[i].value
       ) return playerWins(currentPlayer)
     
     // check columns
@@ -48,6 +49,7 @@ function App() {
         currentPlayer.symbol === newBoxes[i].value
         && newBoxes[i].value === newBoxes[i + 3].value
         && newBoxes[i + 3].value === newBoxes[i + 6].value
+        && newBoxes[i].value
       ) return playerWins(currentPlayer)
 
     // check diaognals
@@ -55,10 +57,12 @@ function App() {
       (currentPlayer.symbol === newBoxes[0].value
         && newBoxes[0].value === newBoxes[4].value
         && newBoxes[4].value === newBoxes[8].value
+        && newBoxes[0].value
       ) || (
         currentPlayer.symbol === newBoxes[2].value
         && newBoxes[0].value === newBoxes[4].value
         && newBoxes[4].value === newBoxes[6].value
+        && newBoxes[2].value
       )
     )
       return playerWins(currentPlayer)
